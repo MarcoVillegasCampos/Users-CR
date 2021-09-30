@@ -13,25 +13,31 @@
     <h1>ALL USERS</h1>
 
     <table>
-
+        <thead>
         <tr>
             <th> First name</th>
             <th> Last name</th>
             <th> Email</th>
             <th> Created at</th>
         </tr>
+
+        </thead>
+        <tbody>
         {% for user in users: %}
         <tr>
-            <td>{{user['firstname']}}</td>
-            <td>{{user['lastname']}}</td>
-            <td>{{user['email']}}</td>
-            <td>{{user['createdAt']}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.created_at}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
 
 
     </table>
-        {% endfor %}
+       
 
-    <a href="/user/new"> Add a New User</a>
+    <a href="user/new"> Add a New User</a>
 </body>
 
 </html>
